@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="stylesheet" href="./font_w56517q4zfo/iconfont.css" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./font_w56517q4zfo/iconfont.js"></script>
+  <title>Document</title>
+  <style>
+    #app {
+      margin: 0 auto;
+      padding: 0;
+      height: 90vh;
+      width: 40vw;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+    }
+
+    div {
+      display: inline;
+    }
+
+    .icon {
+      border-radius: 1em;
+      background-color: rgb(243, 243, 243);
+      box-shadow: 18px 18px 30px rgba(0, 0, 0, 0.1),
+        -18px -18px 30px rgba(0255, 255, 255, 1);
+      margin: 2em;
+      width: 4em;
+      height: 4em;
+      vertical-align: -0.75em;
+      fill: currentColor;
+      overflow: hidden;
+      transform: box-shadow .2s ease-out;
+    }
+
+    .icon:hover {
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1),
+        0px 0px 0px rgba(0255, 255, 255, 1),
+        inset 18px 18px 30px rgba(0, 0, 0, 0.1),
+        inset -18px -18px -30px rgba(0255, 255, 255, 1);
+      transform: box-shadow .2s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <svg class="icon" aria-hidden="true" v-for="ico in icons">
+      <use :xlink:href="ico"></use>
+    </svg>
+  </div>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        icons: [
+          "#icon-biaoqing",
+          "#icon-gouwu",
+          "#icon-dushu",
+          "#icon-liwu",
+          "#icon-zhaopian",
+          "#icon-qianbao",
+          "#icon-tongzhi",
+          "#icon-youxi",
+          "#icon-shoucang",
+        ],
+      },
+      methods: {},
+    });
+  </script>
+</body>
+
+</html>
